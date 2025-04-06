@@ -1,0 +1,6 @@
+@Festivos.Infraestructura.Repositorios_HostAddress = http://localhost:5257
+
+GET {{Festivos.Infraestructura.Repositorios_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
