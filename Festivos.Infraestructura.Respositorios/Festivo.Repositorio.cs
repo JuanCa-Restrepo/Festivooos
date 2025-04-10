@@ -10,13 +10,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Festivos.Infraestructura.Respositorios
 {
-    public class FestivoReposititorio : IFestivosRepo
+    public class FestivoRepositorio : IFestivosRepo
     {
      
 
         private readonly FestivosContext context;
 
-        public FestivoReposititorio(FestivosContext context)
+        public FestivoRepositorio(FestivosContext context)
         {
             this.context = context;
         }
@@ -36,10 +36,10 @@ namespace Festivos.Infraestructura.Respositorios
             await context.SaveChangesAsync();
             return await context.Festivos.FindAsync(festivo.Id);
         }
-        public async Task<IEnumerable<Festivo>> Buscar(int Tipo, string Dato)
+        public async Task<IEnumerable<Festivo>> Buscar( string Dato)
         {
             return await context.Festivos
-                .Where(item => (Tipo == 0 && item.Nombre.Contains(Dato))).ToListAsync();
+                .Where(item => ( item.Nombre.Contains(Dato))).ToListAsync();
                 
         }
 
@@ -68,15 +68,7 @@ namespace Festivos.Infraestructura.Respositorios
             return await context.Festivos.ToArrayAsync();
         }
 
-        public Task<IEnumerable<Festivo>> Validar(int Dia, int Mes)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<Festivo>> CalcularPascua(int anio)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
     }
 

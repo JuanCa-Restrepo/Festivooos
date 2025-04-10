@@ -9,9 +9,18 @@ namespace Festivos.CORE.Servicios
 {
     public interface ITipoServicio
     {
+ 
+
+
         Task<IEnumerable<Tipo>> ObtenerTodos();//asinconicidad
         Task<Tipo> ObtenerPorId(int id); // obtener por id
 
-        Task<IEnumerable<Tipo>> Buscar(int Tipo, string Dato);
+        Task<IEnumerable<Tipo>> Buscar(int Tipo, string Dato);      
+
+        Task<Tipo> Agregar(Tipo tipo); //agregar datos
+
+        Task<Tipo> Actualizar(Tipo tipo); //actualizar datos
+
+        Task<bool> Eliminar(int id); //eliminar datos
     }
 }

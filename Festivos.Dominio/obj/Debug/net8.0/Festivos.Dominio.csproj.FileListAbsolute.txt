@@ -1,0 +1,13 @@
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Dominio\bin\Debug\net8.0\Festivos.Dominio.deps.json
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Dominio\bin\Debug\net8.0\Festivos.Dominio.dll
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Dominio\bin\Debug\net8.0\Festivos.Dominio.pdb
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Dominio\obj\Debug\net8.0\Festivos.Dominio.csproj.AssemblyReference.cache
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Dominio\obj\Debug\net8.0\Festivos.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Dominio\obj\Debug\net8.0\Festivos.Dominio.AssemblyInfoInputs.cache
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Dominio\obj\Debug\net8.0\Festivos.Dominio.AssemblyInfo.cs
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Dominio\obj\Debug\net8.0\Festivos.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Dominio\obj\Debug\net8.0\Festivos.Dominio.sourcelink.json
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Dominio\obj\Debug\net8.0\Festivos.Dominio.dll
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Dominio\obj\Debug\net8.0\refint\Festivos.Dominio.dll
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Dominio\obj\Debug\net8.0\Festivos.Dominio.pdb
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Dominio\obj\Debug\net8.0\ref\Festivos.Dominio.dll

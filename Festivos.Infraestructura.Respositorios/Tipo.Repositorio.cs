@@ -35,11 +35,7 @@ namespace Festivos.Infraestructura.Respositorios
             return await context.Tipos.FindAsync(tipo.Id);
         }
 
-        public async Task<IEnumerable<Tipo>> Buscar(string Dato)
-        {
-            return await context.Tipos
-                .Where(item => item.TipoFestivo.Contains(Dato)).ToListAsync();
-        }
+      
 
         public async Task<bool> Eliminar(int id)
         {
@@ -66,6 +62,12 @@ namespace Festivos.Infraestructura.Respositorios
         public async Task<IEnumerable<Tipo>> ObtenerTodos()
         {
             return await context.Tipos.ToListAsync();
+        }
+
+        public async Task<IEnumerable<Tipo>> Buscar(int Tipo, string Dato)
+        {
+            return await context.Tipos
+                .Where(item => (Tipo == 0 && item.TipoFestivo.Contains(Dato))).ToListAsync();
         }
     }
 }

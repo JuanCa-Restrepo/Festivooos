@@ -1,0 +1,16 @@
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Persistencia\bin\Debug\net8.0\Festivos.Persistencia.deps.json
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Persistencia\bin\Debug\net8.0\Festivos.Persistencia.dll
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Persistencia\bin\Debug\net8.0\Festivos.Persistencia.pdb
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Persistencia\bin\Debug\net8.0\Festivos.Dominio.dll
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Persistencia\bin\Debug\net8.0\Festivos.Dominio.pdb
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Persistencia\obj\Debug\net8.0\Festivos.Persistencia.csproj.AssemblyReference.cache
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Persistencia\obj\Debug\net8.0\Festivos.Persistencia.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Persistencia\obj\Debug\net8.0\Festivos.Persistencia.AssemblyInfoInputs.cache
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Persistencia\obj\Debug\net8.0\Festivos.Persistencia.AssemblyInfo.cs
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Persistencia\obj\Debug\net8.0\Festivos.Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Persistencia\obj\Debug\net8.0\Festivos.Persistencia.sourcelink.json
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Persistencia\obj\Debug\net8.0\Festivos.DA3476AD.Up2Date
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Persistencia\obj\Debug\net8.0\Festivos.Persistencia.dll
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Persistencia\obj\Debug\net8.0\refint\Festivos.Persistencia.dll
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Persistencia\obj\Debug\net8.0\Festivos.Persistencia.pdb
+C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Persistencia\obj\Debug\net8.0\ref\Festivos.Persistencia.dll

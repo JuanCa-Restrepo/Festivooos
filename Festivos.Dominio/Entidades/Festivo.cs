@@ -25,7 +25,7 @@ namespace Festivos.Dominio.Entidades
         [Column("DiasPascua")]
         public int DiasPascua { get; set; }
 
-        [Column("TipoId")]
+        [Column("IdTipo")]
         public int TipoId { get; set; }
 
         public required Tipo TipoDia { get; set; }

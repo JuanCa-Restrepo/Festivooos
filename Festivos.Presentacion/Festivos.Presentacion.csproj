@@ -10,4 +10,11 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Festivos.aplicacion\Festivos.aplicacion.csproj" />
+    <ProjectReference Include="..\Festivos.Dominio\Festivos.Dominio.csproj" />
+    <ProjectReference Include="..\Festivos.Infraestructura.Respositorios\Festivos.Infraestructura.Respositorios.csproj" />
+    <ProjectReference Include="..\Festivos.Persistencia\Festivos.Persistencia.csproj" />
+  </ItemGroup>
+
 </Project>
