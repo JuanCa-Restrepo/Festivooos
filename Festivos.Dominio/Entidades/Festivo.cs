@@ -28,6 +28,6 @@ namespace Festivos.Dominio.Entidades
         [Column("IdTipo")]
         public int TipoId { get; set; }
 
-        public required Tipo TipoDia { get; set; }
+        public required Tipo? Tipo { get; set; }
     }
 }

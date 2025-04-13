@@ -53,6 +53,7 @@ namespace Festivos.aplicacion.Servicios
             try
             {
                 fecha = new DateTime(anio, Mes, Dia);  // Verifica que la fecha sea válida
+                
             }
             catch (ArgumentOutOfRangeException)
             {
@@ -62,6 +63,7 @@ namespace Festivos.aplicacion.Servicios
 
             // Obtener los festivos desde el repositorio
             var festivos = await _festivosRepositorio.ObtenerTodos();
+            DateTime DomingoRamos = await ObtenerIniciodeSemanaSanta(fecha.Year);
 
             // Buscar si la fecha ingresada corresponde a un festivo
             foreach (var festivo in festivos)
@@ -82,13 +84,13 @@ namespace Festivos.aplicacion.Servicios
 
                     case 3: // Basado en Pascua
                             // Para un festivo basado en Pascua, calculamos la fecha de Pascua y le sumamos los días correspondientes
-                        var pascua = await ObtenerIniciodeSemanaSanta(fecha.Year);
-                        fechaFestivo = await AgregarDias(pascua, festivo.DiasPascua);
+                        var DomingoPascua = await ObtenerIniciodeSemanaSanta(fecha.Year);
+                        fechaFestivo = await AgregarDias(DomingoPascua, (festivo.DiasPascua + 7));
                         break;
 
                     case 4: // Pascua + Ley Puente
                             // Para Pascua + Ley Puente, calculamos la Pascua y luego ajustamos la fecha al lunes más cercano
-                        var basePascua = await AgregarDias(await ObtenerIniciodeSemanaSanta(fecha.Year), festivo.DiasPascua);
+                        var basePascua = await AgregarDias(await ObtenerIniciodeSemanaSanta(fecha.Year), (festivo.DiasPascua + 7));
                         fechaFestivo = await ObtenerSiguienteLunes(basePascua);
                         break;
 
@@ -106,23 +108,28 @@ namespace Festivos.aplicacion.Servicios
         }
         public async Task<DateTime> ObtenerIniciodeSemanaSanta(int anio)
         {
-            int a, b, c, d, dias;
-            a = anio % 19;
-            b = anio % 4;
-            c = anio % 7;
-            d = (19 * a + 24) % 30;
-            dias = d + (2 * b + 4 * c + 6 * d + 5) % 7;
+            
+                int a, b, c, d, dias;
+                a = anio % 19;
+                b = anio % 4;
+                c = anio % 7;
+                d = (19 * a + 24) % 30;
+                dias = d + (2 * b + 4 * c + 6 * d + 5) % 7;
 
-            int dia = 15 + dias;
-            int mes = 3;
+                int dia = 15 + dias;
+                int mes = 3;
 
-            if (dia > 31)
-            {
-                dia = dia - 31;
-                mes = mes + 1;
+                if (dia > 31)
+                {
+                    dia = dia - 31;
+                    mes = mes + 1;
+                }
+
+                // Crear la fecha del Domingo de Pascua
+                DateTime domingoDeRamos = new DateTime(anio, mes, dia);
+
+               return domingoDeRamos;
             }
-            return new DateTime(anio, mes, dia);
-        }
         public async Task<DateTime> AgregarDias(DateTime fecha, int dias)
         {
             return fecha.AddDays(dias);

@@ -13,7 +13,7 @@ namespace Festivos.Dominio.Entidades
         [Column("Id")]
         public int Id { get; set; }
 
-        [Column("TipoFestivo")] 
+        [Column("Tipo")] 
         public required string TipoFestivo { get; set; }
     }
 }

@@ -24,7 +24,7 @@ namespace Festivos.Persistencia.Contexto
                 });
 
             Builder.Entity<Festivo>()
-                .HasOne(e => e.TipoDia)
+                .HasOne(e => e.Tipo)
                 .WithMany()
                 .HasForeignKey(e => e.TipoId);
 

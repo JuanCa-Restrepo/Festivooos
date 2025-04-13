@@ -92,41 +92,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Festivo"
+                "$ref": "#/components/schemas/FestivosAgregarDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Festivo"
+                "$ref": "#/components/schemas/FestivosAgregarDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Festivo"
+                "$ref": "#/components/schemas/FestivosAgregarDTO"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Festivo"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Festivo"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Festivo"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -140,41 +123,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Festivo"
+                "$ref": "#/components/schemas/FestivoAtualizarDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Festivo"
+                "$ref": "#/components/schemas/FestivoAtualizarDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Festivo"
+                "$ref": "#/components/schemas/FestivoAtualizarDTO"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Festivo"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Festivo"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Festivo"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -462,6 +428,277 @@
           }
         }
       }
+    },
+    "/api/TipoFestivo/ObtenerTodos": {
+      "get": {
+        "tags": [
+          "TipoFestivosControllers"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Tipo"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Tipo"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Tipo"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TipoFestivo/ObtenerPorId/{id}": {
+      "get": {
+        "tags": [
+          "TipoFestivosControllers"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tipo"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tipo"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tipo"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TipoFestivo/Agregar": {
+      "post": {
+        "tags": [
+          "TipoFestivosControllers"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Tipo"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Tipo"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Tipo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tipo"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tipo"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tipo"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TipoFestivo/Actualizar": {
+      "put": {
+        "tags": [
+          "TipoFestivosControllers"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Tipo"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Tipo"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Tipo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tipo"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tipo"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tipo"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TipoFestivo/Eliminar/{id}": {
+      "delete": {
+        "tags": [
+          "TipoFestivosControllers"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TipoFestivo/Buscar/{Tipo}/{Dato}": {
+      "get": {
+        "tags": [
+          "TipoFestivosControllers"
+        ],
+        "parameters": [
+          {
+            "name": "Tipo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Dato",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Tipo"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Tipo"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Tipo"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -469,7 +706,7 @@
       "Festivo": {
         "required": [
           "nombre",
-          "tipoDia"
+          "tipo"
         ],
         "type": "object",
         "properties": {
@@ -497,8 +734,64 @@
             "type": "integer",
             "format": "int32"
           },
-          "tipoDia": {
+          "tipo": {
             "$ref": "#/components/schemas/Tipo"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FestivoAtualizarDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "dia": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mes": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "diasPascua": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FestivosAgregarDTO": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "dia": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mes": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "diasPascua": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

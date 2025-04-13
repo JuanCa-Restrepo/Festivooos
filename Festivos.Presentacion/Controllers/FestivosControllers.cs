@@ -2,6 +2,7 @@
 using Festivos.CORE.Servicios;
 using Festivos.Dominio.Entidades;
 using Microsoft.AspNetCore.Mvc;
+using Festivos.Dominio.DTOs;
 
 namespace Festivos.Presentacion.Controllers
 {
@@ -29,15 +30,57 @@ namespace Festivos.Presentacion.Controllers
         }
 
         [HttpPost("Agregar")]
-        public async Task<Festivo> Agregar([FromBody] Festivo festivo)
+        public async Task<IActionResult> Agregar([FromBody] FestivosAgregarDTO dto)
+
         {
-            return await servicio.Agregar(festivo);
+            if ((dto.TipoId == 3 || dto.TipoId == 4) && (dto.Dia != 0 || dto.Mes != 0))
+            {
+                return BadRequest("Para los tipos 3 o 4, el día y el mes deben ser igual a 0");
+            }
+
+            if (dto.TipoId == 0 )
+            {
+                return BadRequest("El tipo no puede ser 0");
+            }
+            var festivo = new Festivo
+            {
+                Nombre = dto.Nombre,
+                Dia = dto.Dia,
+                Mes = dto.Mes,
+                DiasPascua = dto.DiasPascua,
+                TipoId = dto.TipoId,
+                Tipo = null // 👈 Esto evita que EF Core intente insertar el objeto Tipo
+            };
+
+            var agregado = await servicio.Agregar(festivo);
+            return Ok(agregado);
         }
 
         [HttpPut("Actualizar")]
-        public async Task<Festivo> Actualizar([FromBody] Festivo festivo)
+        public async Task<IActionResult> Actualizar([FromBody]  FestivoAtualizarDTO dto)
         {
-            return await servicio.Actualizar(festivo);
+            if ((dto.TipoId == 3 || dto.TipoId == 4) && (dto.Dia != 0 || dto.Mes != 0))
+            {
+                return BadRequest("Para los tipos 3 o 4, el día y el mes deben ser igual a 0");
+            }
+
+            if (dto.TipoId == 0)
+            {
+                return BadRequest("El tipo no puede ser 0");
+            }
+            var festivo = new Festivo
+            {
+                Id = dto.Id,
+                Nombre = dto.Nombre,
+                Dia = dto.Dia,
+                Mes = dto.Mes,
+                DiasPascua = dto.DiasPascua,
+                TipoId = dto.TipoId,
+                Tipo = null // 👈 Esto evita que EF Core intente insertar el objeto Tipo
+            };
+
+            var actualizado = await servicio.Actualizar(festivo);
+            return Ok(actualizado);
         }
 
         [HttpDelete("Eliminar/{id}")]

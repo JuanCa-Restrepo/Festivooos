@@ -8,22 +8,12 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "festivo",
-        "Type": "Festivos.Dominio.Entidades.Festivo",
+        "Name": "dto",
+        "Type": "Festivos.Dominio.DTOs.FestivoAtualizarDTO",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "Festivos.Dominio.Entidades.Festivo",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Festivos.Presentacion.Controllers.FestivosControllers",
@@ -34,22 +24,12 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "festivo",
-        "Type": "Festivos.Dominio.Entidades.Festivo",
+        "Name": "dto",
+        "Type": "Festivos.Dominio.DTOs.FestivosAgregarDTO",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "Festivos.Dominio.Entidades.Festivo",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Festivos.Presentacion.Controllers.FestivosControllers",
@@ -259,6 +239,161 @@
     "ReturnTypes": [
       {
         "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Festivos.Presentacion.Controllers.TipoFestivosControllers",
+    "Method": "Actualizar",
+    "RelativePath": "api/TipoFestivo/Actualizar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipo",
+        "Type": "Festivos.Dominio.Entidades.Tipo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Festivos.Dominio.Entidades.Tipo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Festivos.Presentacion.Controllers.TipoFestivosControllers",
+    "Method": "Agregar",
+    "RelativePath": "api/TipoFestivo/Agregar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipo",
+        "Type": "Festivos.Dominio.Entidades.Tipo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Festivos.Dominio.Entidades.Tipo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Festivos.Presentacion.Controllers.TipoFestivosControllers",
+    "Method": "Buscar",
+    "RelativePath": "api/TipoFestivo/Buscar/{Tipo}/{Dato}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Tipo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Dato",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Festivos.Dominio.Entidades.Tipo, Festivos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Festivos.Presentacion.Controllers.TipoFestivosControllers",
+    "Method": "Eliminar",
+    "RelativePath": "api/TipoFestivo/Eliminar/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Festivos.Presentacion.Controllers.TipoFestivosControllers",
+    "Method": "ObtenerPorId",
+    "RelativePath": "api/TipoFestivo/ObtenerPorId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Festivos.Dominio.Entidades.Tipo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Festivos.Presentacion.Controllers.TipoFestivosControllers",
+    "Method": "ObtenerTodos",
+    "RelativePath": "api/TipoFestivo/ObtenerTodos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Festivos.Dominio.Entidades.Tipo, Festivos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
