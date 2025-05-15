@@ -673,7 +673,7 @@
         },
         "runtime": {
           "Festivos.aplicacion.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -684,7 +684,7 @@
         },
         "runtime": {
           "Festivos.CORE.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -695,7 +695,7 @@
         },
         "runtime": {
           "Festivos.Dominio.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -708,7 +708,7 @@
         },
         "runtime": {
           "Festivos.Infraestructura.Respositorios.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -719,7 +719,7 @@
         },
         "runtime": {
           "Festivos.Persistencia.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }

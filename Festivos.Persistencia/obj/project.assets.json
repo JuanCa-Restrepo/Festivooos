@@ -2826,23 +2826,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\juanc\\.nuget\\packages\\": {},
+    "C:\\Users\\serdn\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\juanc\\Documents\\HPIII---FESTIVOS-JAJ-main\\Festivos.Persistencia\\Festivos.Persistencia.csproj",
+      "projectUniqueName": "C:\\Users\\serdn\\OneDrive\\Escritorio\\herramientas 3\\Festivooos\\Festivos.Persistencia\\Festivos.Persistencia.csproj",
       "projectName": "Festivos.Persistencia",
-      "projectPath": "C:\\Users\\juanc\\Documents\\HPIII---FESTIVOS-JAJ-main\\Festivos.Persistencia\\Festivos.Persistencia.csproj",
-      "packagesPath": "C:\\Users\\juanc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\juanc\\Documents\\HPIII---FESTIVOS-JAJ-main\\Festivos.Persistencia\\obj\\",
+      "projectPath": "C:\\Users\\serdn\\OneDrive\\Escritorio\\herramientas 3\\Festivooos\\Festivos.Persistencia\\Festivos.Persistencia.csproj",
+      "packagesPath": "C:\\Users\\serdn\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\serdn\\OneDrive\\Escritorio\\herramientas 3\\Festivooos\\Festivos.Persistencia\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\juanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\serdn\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2857,8 +2857,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\juanc\\Documents\\HPIII---FESTIVOS-JAJ-main\\Festivos.Dominio\\Festivos.Dominio.csproj": {
-              "projectPath": "C:\\Users\\juanc\\Documents\\HPIII---FESTIVOS-JAJ-main\\Festivos.Dominio\\Festivos.Dominio.csproj"
+            "C:\\Users\\serdn\\OneDrive\\Escritorio\\herramientas 3\\Festivooos\\Festivos.Dominio\\Festivos.Dominio.csproj": {
+              "projectPath": "C:\\Users\\serdn\\OneDrive\\Escritorio\\herramientas 3\\Festivooos\\Festivos.Dominio\\Festivos.Dominio.csproj"
             }
           }
         }
@@ -2873,7 +2873,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -2894,7 +2894,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

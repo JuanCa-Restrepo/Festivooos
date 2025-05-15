@@ -14,3 +14,19 @@ C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.CORE\obj\Debug\net8.
 C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.CORE\obj\Debug\net8.0\refint\Festivos.CORE.dll
 C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.CORE\obj\Debug\net8.0\Festivos.CORE.pdb
 C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.CORE\obj\Debug\net8.0\ref\Festivos.CORE.dll
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.CORE\bin\Debug\net8.0\Festivos.CORE.deps.json
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.CORE\bin\Debug\net8.0\Festivos.CORE.dll
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.CORE\bin\Debug\net8.0\Festivos.CORE.pdb
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.CORE\bin\Debug\net8.0\Festivos.Dominio.dll
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.CORE\bin\Debug\net8.0\Festivos.Dominio.pdb
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.CORE\obj\Debug\net8.0\Festivos.CORE.csproj.AssemblyReference.cache
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.CORE\obj\Debug\net8.0\Festivos.CORE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.CORE\obj\Debug\net8.0\Festivos.CORE.AssemblyInfoInputs.cache
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.CORE\obj\Debug\net8.0\Festivos.CORE.AssemblyInfo.cs
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.CORE\obj\Debug\net8.0\Festivos.CORE.csproj.CoreCompileInputs.cache
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.CORE\obj\Debug\net8.0\Festivos.CORE.sourcelink.json
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.CORE\obj\Debug\net8.0\Festivos.92A76B57.Up2Date
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.CORE\obj\Debug\net8.0\Festivos.CORE.dll
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.CORE\obj\Debug\net8.0\refint\Festivos.CORE.dll
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.CORE\obj\Debug\net8.0\Festivos.CORE.pdb
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.CORE\obj\Debug\net8.0\ref\Festivos.CORE.dll

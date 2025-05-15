@@ -18,3 +18,23 @@ C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Infraestructura.Resp
 C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Infraestructura.Respositorios\obj\Debug\net8.0\refint\Festivos.Infraestructura.Respositorios.dll
 C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Infraestructura.Respositorios\obj\Debug\net8.0\Festivos.Infraestructura.Respositorios.pdb
 C:\Users\juanc\Documents\HPIII---FESTIVOS-JAJ-main\Festivos.Infraestructura.Respositorios\obj\Debug\net8.0\ref\Festivos.Infraestructura.Respositorios.dll
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.Infraestructura.Respositorios\bin\Debug\net8.0\Festivos.Infraestructura.Respositorios.deps.json
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.Infraestructura.Respositorios\bin\Debug\net8.0\Festivos.Infraestructura.Respositorios.dll
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.Infraestructura.Respositorios\bin\Debug\net8.0\Festivos.Infraestructura.Respositorios.pdb
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.Infraestructura.Respositorios\bin\Debug\net8.0\Festivos.CORE.dll
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.Infraestructura.Respositorios\bin\Debug\net8.0\Festivos.Dominio.dll
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.Infraestructura.Respositorios\bin\Debug\net8.0\Festivos.Persistencia.dll
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.Infraestructura.Respositorios\bin\Debug\net8.0\Festivos.CORE.pdb
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.Infraestructura.Respositorios\bin\Debug\net8.0\Festivos.Dominio.pdb
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.Infraestructura.Respositorios\bin\Debug\net8.0\Festivos.Persistencia.pdb
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.Infraestructura.Respositorios\obj\Debug\net8.0\Festivos.Infraestructura.Respositorios.csproj.AssemblyReference.cache
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.Infraestructura.Respositorios\obj\Debug\net8.0\Festivos.Infraestructura.Respositorios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.Infraestructura.Respositorios\obj\Debug\net8.0\Festivos.Infraestructura.Respositorios.AssemblyInfoInputs.cache
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.Infraestructura.Respositorios\obj\Debug\net8.0\Festivos.Infraestructura.Respositorios.AssemblyInfo.cs
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.Infraestructura.Respositorios\obj\Debug\net8.0\Festivos.Infraestructura.Respositorios.csproj.CoreCompileInputs.cache
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.Infraestructura.Respositorios\obj\Debug\net8.0\Festivos.Infraestructura.Respositorios.sourcelink.json
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.Infraestructura.Respositorios\obj\Debug\net8.0\Festivos.BE58920B.Up2Date
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.Infraestructura.Respositorios\obj\Debug\net8.0\Festivos.Infraestructura.Respositorios.dll
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.Infraestructura.Respositorios\obj\Debug\net8.0\refint\Festivos.Infraestructura.Respositorios.dll
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.Infraestructura.Respositorios\obj\Debug\net8.0\Festivos.Infraestructura.Respositorios.pdb
+C:\Users\serdn\OneDrive\Escritorio\herramientas 3\Festivooos\Festivos.Infraestructura.Respositorios\obj\Debug\net8.0\ref\Festivos.Infraestructura.Respositorios.dll
