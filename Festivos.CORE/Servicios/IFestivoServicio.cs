@@ -19,7 +19,7 @@ namespace Festivos.CORE.Servicios
 
         Task<bool> Eliminar(int id); //eliminar datos 
 
-        Task<IEnumerable<Festivo>> Buscar( string Dato);
+        Task<IEnumerable<Festivo>> Buscar(int opcion, string Dato);
 
         Task<string> Validar(int Dia, int Mes, int anio);// valida que la fecha ingresada corresponda
 

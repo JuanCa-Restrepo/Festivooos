@@ -185,12 +185,21 @@
         }
       }
     },
-    "/api/festivos/Buscar/{Dato}": {
+    "/api/festivos/Buscar/{opcion}/{Dato}": {
       "get": {
         "tags": [
           "FestivosControllers"
         ],
         "parameters": [
+          {
+            "name": "opcion",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "Dato",
             "in": "path",

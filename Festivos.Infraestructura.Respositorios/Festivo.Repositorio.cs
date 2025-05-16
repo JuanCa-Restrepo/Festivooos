@@ -23,9 +23,11 @@ namespace Festivos.Infraestructura.Respositorios
 
         public async Task<Festivo> Agregar(Festivo festivo)
         {
-            var festivoagregado = await context.Festivos.AddAsync(festivo);
+            context.Festivos.Add(festivo);
             await context.SaveChangesAsync();
-            return festivoagregado.Entity;
+            return await context.Festivos
+                .Include(e => e.Tipo)
+                .FirstOrDefaultAsync(e => e.Id == festivo.Id);
         }
         public async Task<Festivo> Actualizar(Festivo festivo)
         {
@@ -34,13 +36,20 @@ namespace Festivos.Infraestructura.Respositorios
            
             context.Entry(festivoexistente).CurrentValues.SetValues(festivo);
             await context.SaveChangesAsync();
-            return await context.Festivos.FindAsync(festivo.Id);
+            return await context.Festivos
+                .Include(e => e.Tipo)
+                .FirstOrDefaultAsync(e => e.Id == festivo.Id);
         }
-        public async Task<IEnumerable<Festivo>> Buscar( string Dato)
+        public async Task<IEnumerable<Festivo>> Buscar(int opcion, string Dato)
         {
             return await context.Festivos
-                .Where(item => ( item.Nombre.Contains(Dato))).ToListAsync();
-                
+               
+            .Where(item => (opcion == 0 && item.Nombre.Contains(Dato))
+                || (opcion == 1 && item.Tipo.TipoFestivo.Contains(Dato)))
+            .Include(f => f.Tipo)
+                .ToArrayAsync();
+
+             
         }
 
         public async Task<bool> Eliminar(int id)
@@ -65,7 +74,9 @@ namespace Festivos.Infraestructura.Respositorios
         }
         public async Task<IEnumerable<Festivo>> ObtenerTodos()
         {
-            return await context.Festivos.ToArrayAsync();
+            return await context.Festivos
+                .Include(f => f.Tipo)
+                .ToArrayAsync();
         }
 
        

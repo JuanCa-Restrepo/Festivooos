@@ -41,9 +41,9 @@ namespace Festivos.aplicacion.Servicios
         {
             return await _festivosRepositorio.Eliminar(id);
         }
-        public async Task<IEnumerable<Festivo>> Buscar(string Dato)
+        public async Task<IEnumerable<Festivo>> Buscar(int opcion, string Dato)
         {
-            return await _festivosRepositorio.Buscar(Dato);
+            return await _festivosRepositorio.Buscar(opcion, Dato);
         }
         public async Task<string> Validar(int Dia, int Mes, int anio)
         {

@@ -65,11 +65,16 @@
   {
     "ContainingType": "Festivos.Presentacion.Controllers.FestivosControllers",
     "Method": "Buscar",
-    "RelativePath": "api/festivos/Buscar/{Dato}",
+    "RelativePath": "api/festivos/Buscar/{opcion}/{Dato}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "opcion",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
       {
         "Name": "Dato",
         "Type": "System.String",

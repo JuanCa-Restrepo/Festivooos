@@ -18,7 +18,7 @@ namespace Festivos.CORE.Repositorio
 
         Task<bool> Eliminar(int id); //eliminar datos 
 
-        Task<IEnumerable<Festivo>> Buscar( string Dato);
+        Task<IEnumerable<Festivo>> Buscar( int opcion, string Dato);
 
        
     }

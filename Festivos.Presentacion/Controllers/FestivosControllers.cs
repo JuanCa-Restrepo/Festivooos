@@ -89,10 +89,10 @@ namespace Festivos.Presentacion.Controllers
             return await servicio.Eliminar(id);
         }
 
-        [HttpGet("Buscar/{Dato}")]
-        public async Task<IEnumerable<Festivo>> Buscar( string Dato)
+        [HttpGet("Buscar/{opcion}/{Dato}")]
+        public async Task<IEnumerable<Festivo>> Buscar(int opcion, string Dato)
         {
-            return await servicio.Buscar( Dato);
+            return await servicio.Buscar(opcion, Dato);
         }
 
         [HttpGet("Validar/{Dia}/{Mes}/{anio}")]
