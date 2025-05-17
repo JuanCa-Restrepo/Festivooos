@@ -3,6 +3,8 @@ using Festivos.CORE.Servicios;
 using Festivos.Dominio.Entidades;
 using Microsoft.AspNetCore.Mvc;
 using Festivos.Dominio.DTOs;
+using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace Festivos.Presentacion.Controllers
 {
@@ -95,11 +97,36 @@ namespace Festivos.Presentacion.Controllers
             return await servicio.Buscar(opcion, Dato);
         }
 
-        [HttpGet("Validar/{Dia}/{Mes}/{anio}")]
-        public async Task<string> Validar(int Dia, int Mes, int anio)
-        {
-            return await servicio.Validar(Dia, Mes, anio);
-        }
+       
+            [HttpGet("Validar/{fecha}")]
+            public async Task<IActionResult> Validar(string fecha)
+            {
+                // Paso 1: Validar el formato dd-MM-yyyy estrictamente (con regex)
+                var regex = new Regex(@"^\d{2}-\d{2}-\d{4}$");
+
+                if (!regex.IsMatch(fecha))
+                {
+                    return BadRequest("El formato es incorrecto. Usa dd-MM-yyyy.");
+                }
+
+                // Paso 2: Validar si la fecha es real
+                if (!DateTime.TryParseExact(
+                        fecha,
+                        "dd-MM-yyyy",
+                        CultureInfo.InvariantCulture,
+                        DateTimeStyles.None,
+                        out DateTime fechaParseada))
+                {
+                    return BadRequest("La fecha no existe. Revisa día y mes.");
+                }
+
+                var resultado = await servicio.Validar(fechaParseada);
+                return Ok(resultado);
+            }
+
+        
+
+
 
         [HttpGet("ObtenerIniciodeSemanaSanta/{anio}")]
         public async Task<DateTime> ObtenerIniciodeSemanaSanta(int anio)

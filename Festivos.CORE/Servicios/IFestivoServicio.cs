@@ -21,7 +21,7 @@ namespace Festivos.CORE.Servicios
 
         Task<IEnumerable<Festivo>> Buscar(int opcion, string Dato);
 
-        Task<string> Validar(int Dia, int Mes, int anio);// valida que la fecha ingresada corresponda
+        Task<string> Validar(DateTime fecha);// valida que la fecha ingresada corresponda
 
         Task<DateTime> ObtenerIniciodeSemanaSanta(int anio); // calcula la fecha del domingo de pascua
 

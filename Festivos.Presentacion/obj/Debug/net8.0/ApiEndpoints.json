@@ -220,38 +220,18 @@
   {
     "ContainingType": "Festivos.Presentacion.Controllers.FestivosControllers",
     "Method": "Validar",
-    "RelativePath": "api/festivos/Validar/{Dia}/{Mes}/{anio}",
+    "RelativePath": "api/festivos/Validar/{fecha}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Dia",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "Mes",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "anio",
-        "Type": "System.Int32",
+        "Name": "fecha",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Festivos.Presentacion.Controllers.TipoFestivosControllers",

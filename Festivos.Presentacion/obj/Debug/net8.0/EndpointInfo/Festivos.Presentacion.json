@@ -242,60 +242,24 @@
         }
       }
     },
-    "/api/festivos/Validar/{Dia}/{Mes}/{anio}": {
+    "/api/festivos/Validar/{fecha}": {
       "get": {
         "tags": [
           "FestivosControllers"
         ],
         "parameters": [
           {
-            "name": "Dia",
+            "name": "fecha",
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "Mes",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "anio",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }

@@ -45,21 +45,9 @@ namespace Festivos.aplicacion.Servicios
         {
             return await _festivosRepositorio.Buscar(opcion, Dato);
         }
-        public async Task<string> Validar(int Dia, int Mes, int anio)
+        public async Task<string> Validar(DateTime fecha)
         {
-            DateTime fecha;
-
-            // Validar si la fecha es válida
-            try
-            {
-                fecha = new DateTime(anio, Mes, Dia);  // Verifica que la fecha sea válida
-                
-            }
-            catch (ArgumentOutOfRangeException)
-            {
-                // Si la fecha es inválida, devolvemos un mensaje sin lanzar error
-                return "La fecha ingresada no es válida.";
-            }
+            
 
             // Obtener los festivos desde el repositorio
             var festivos = await _festivosRepositorio.ObtenerTodos();
