@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Festivos.Dominio.Entidades;
+using Festivos.Dominio.DTOs;
 
 
 namespace Festivos.CORE.Servicios
@@ -27,6 +28,9 @@ namespace Festivos.CORE.Servicios
 
         Task<DateTime> AgregarDias(DateTime fecha, int dias);
 
-        Task<DateTime> ObtenerSiguienteLunes(DateTime fecha); 
+        Task<DateTime> ObtenerSiguienteLunes(DateTime fecha);
+
+        Task<IEnumerable<FestivoDTO>> ObtenerAnio(int anio);
+
     }
 }

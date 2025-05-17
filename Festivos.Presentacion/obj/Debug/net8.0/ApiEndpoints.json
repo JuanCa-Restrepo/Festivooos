@@ -121,6 +121,32 @@
   },
   {
     "ContainingType": "Festivos.Presentacion.Controllers.FestivosControllers",
+    "Method": "ObtenerAnio",
+    "RelativePath": "api/festivos/listar/{anio}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "anio",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Festivos.Dominio.DTOs.FestivoDTO, Festivos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Festivos.Presentacion.Controllers.FestivosControllers",
     "Method": "ObtenerIniciodeSemanaSanta",
     "RelativePath": "api/festivos/ObtenerIniciodeSemanaSanta/{anio}",
     "HttpMethod": "GET",

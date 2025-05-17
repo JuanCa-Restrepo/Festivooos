@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Festivos.Infraestructura.Respositorios")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41a832e1045887d633ca9c84406cb90bab084a98")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b78c97c395a32082c7b8f2661f424363f937576")]
 [assembly: System.Reflection.AssemblyProductAttribute("Festivos.Infraestructura.Respositorios")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Festivos.Infraestructura.Respositorios")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

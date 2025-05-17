@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Festivos.Dominio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6e18bd278443c46799e25ac66121e5269efab4d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b78c97c395a32082c7b8f2661f424363f937576")]
 [assembly: System.Reflection.AssemblyProductAttribute("Festivos.Dominio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Festivos.Dominio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
