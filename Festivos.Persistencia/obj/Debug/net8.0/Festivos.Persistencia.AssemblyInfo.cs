@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Festivos.Persistencia")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b78c97c395a32082c7b8f2661f424363f937576")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e06150fe60bafe984d859ba69d02ffa93631caf")]
 [assembly: System.Reflection.AssemblyProductAttribute("Festivos.Persistencia")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Festivos.Persistencia")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -13,7 +13,7 @@ namespace Festivos.Dominio.DTOs
         public DateTime Fecha { get; set; }
 
         [JsonPropertyName("fecha")] // Esta será la propiedad visible en el JSON
-        public string FechaFormateada => Fecha.ToString("yyyy-MM-dd");
+        public string FechaFormateada => Fecha.ToString("dd-MM-yyyy");
 
         public string Nombre { get; set; }
     }

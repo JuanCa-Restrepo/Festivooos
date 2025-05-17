@@ -48,96 +48,70 @@ namespace Festivos.aplicacion.Servicios
         }
         public async Task<string> Validar(DateTime fecha)
         {
-
-
-            // Obtener los festivos desde el repositorio
             var festivos = await _festivosRepositorio.ObtenerTodos();
-            DateTime DomingoRamos = await ObtenerIniciodeSemanaSanta(fecha.Year);
+            DateTime domingoPascua = await ObtenerIniciodeSemanaSanta(fecha.Year);
 
-            // Buscar si la fecha ingresada corresponde a un festivo
             foreach (var festivo in festivos)
             {
-                DateTime fechaFestivo;
-
-                switch (festivo.TipoId)
+                DateTime? fechaFestivo = await CalcularFechaFestivo(festivo, fecha.Year, domingoPascua);
+                if (fechaFestivo.HasValue && fechaFestivo.Value.Date == fecha.Date)
                 {
-                    case 1: // Fijo
-                            // Para un festivo fijo, se crea la fecha con el mismo año y el día/mes correspondiente
-                        fechaFestivo = new DateTime(fecha.Year, festivo.Mes, festivo.Dia);
-                        break;
-
-                    case 2: // Ley Puente Festivo
-                            // Para un festivo de ley puente, ajustamos la fecha al lunes más cercano
-                        fechaFestivo = await ObtenerSiguienteLunes(new DateTime(fecha.Year, festivo.Mes, festivo.Dia));
-                        break;
-
-                    case 3: // Basado en Pascua
-                            // Para un festivo basado en Pascua, calculamos la fecha de Pascua y le sumamos los días correspondientes
-                        var DomingoPascua = await ObtenerIniciodeSemanaSanta(fecha.Year);
-                        fechaFestivo = await AgregarDias(DomingoPascua, (festivo.DiasPascua + 7));
-                        break;
-
-                    case 4: // Pascua + Ley Puente
-                            // Para Pascua + Ley Puente, calculamos la Pascua y luego ajustamos la fecha al lunes más cercano
-                        var basePascua = await AgregarDias(await ObtenerIniciodeSemanaSanta(fecha.Year), (festivo.DiasPascua + 7));
-                        fechaFestivo = await ObtenerSiguienteLunes(basePascua);
-                        break;
-
-                    default:
-                        continue; // Si no es ninguno de los tipos anteriores, pasamos al siguiente festivo
-                }
-
-                // Si la fecha ingresada coincide con el festivo calculado, retornamos el nombre del festivo
-                if (fechaFestivo.Date == fecha.Date)
                     return $"Es festivo: {festivo.Nombre}";
+                }
             }
 
-            // Si no se encuentra ningún festivo para esa fecha
             return "La fecha ingresada no es un festivo.";
         }
+
         public async Task<IEnumerable<FestivoDTO>> ObtenerAnio(int anio)
         {
             var festivos = await _festivosRepositorio.ObtenerTodos();
-            List<FestivoDTO> fechaFestivos = new List<FestivoDTO>();
-
-            DateTime DomingoPascua = await ObtenerIniciodeSemanaSanta(anio);
+            var fechaFestivos = new List<FestivoDTO>();
+            DateTime domingoPascua = await ObtenerIniciodeSemanaSanta(anio);
 
             foreach (var festivo in festivos)
             {
-                DateTime fechaFestivo;
-
-                switch (festivo.TipoId)
+                DateTime? fechaFestivo = await CalcularFechaFestivo(festivo, anio, domingoPascua);
+                if (fechaFestivo.HasValue)
                 {
-                    case 1: // Fijo
-                        fechaFestivo = new DateTime(anio, festivo.Mes, festivo.Dia);
-                        break;
-
-                    case 2: // Ley Puente Festivo (lunes más cercano)
-                        fechaFestivo = await ObtenerSiguienteLunes(new DateTime(anio, festivo.Mes, festivo.Dia));
-                        break;
-
-                    case 3: // Basado en Pascua
-                        fechaFestivo = await AgregarDias(DomingoPascua, (festivo.DiasPascua + 7)); // +7 para que sea a partir del Domingo de Pascua
-                        break;
-
-                    case 4: // Pascua + Ley Puente
-                        var baseFecha = await AgregarDias(DomingoPascua, (festivo.DiasPascua + 7));
-                        fechaFestivo = await ObtenerSiguienteLunes(baseFecha);
-                        break;
-
-                    default:
-                        continue;
+                    fechaFestivos.Add(new FestivoDTO
+                    {
+                        Nombre = festivo.Nombre,
+                        Fecha = fechaFestivo.Value.Date
+                    });
                 }
-
-                // Agregar a la lista el nombre y la fecha calculada
-                fechaFestivos.Add(new FestivoDTO
-                {
-                    Nombre = festivo.Nombre,
-                    Fecha = fechaFestivo.Date
-                });
             }
 
             return fechaFestivos;
+        }
+
+        private async Task<DateTime?> CalcularFechaFestivo(Festivo festivo, int anio, DateTime domingoPascua)
+        {
+            try
+            {
+                switch (festivo.TipoId)
+                {
+                    case 1: // Fijo
+                        return new DateTime(anio, festivo.Mes, festivo.Dia);
+
+                    case 2: // Ley Puente Festivo
+                        return await ObtenerSiguienteLunes(new DateTime(anio, festivo.Mes, festivo.Dia));
+
+                    case 3: // Basado en Pascua
+                        return await AgregarDias(domingoPascua, festivo.DiasPascua + 7);
+
+                    case 4: // Pascua + Ley Puente
+                        var baseFecha = await AgregarDias(domingoPascua, festivo.DiasPascua + 7);
+                        return await ObtenerSiguienteLunes(baseFecha);
+
+                    default:
+                        return null;
+                }
+            }
+            catch
+            {
+                return null; // En caso de error de fecha no válida, retorna null
+            }
         }
 
         public async Task<DateTime> ObtenerIniciodeSemanaSanta(int anio)
